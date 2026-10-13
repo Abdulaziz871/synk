@@ -52,6 +52,12 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   $$('[data-reveal]').forEach((el) => revealIO.observe(el));
 
+  /* ---------- أداء: نوقف حركات SVG للأقسام اللي برا الشاشة ---------- */
+  const animIO = new IntersectionObserver((entries) => {
+    entries.forEach((en) => en.target.classList.toggle('is-visible', en.isIntersecting));
+  });
+  $$('[data-anim]').forEach((el) => animIO.observe(el));
+
   /* ---------- حلقة تمرير واحدة (Navbar + خط الخطوات) ---------- */
   const stepsEl = $('.steps');
   let ticking = false;

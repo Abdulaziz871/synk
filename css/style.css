@@ -979,6 +979,20 @@ input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.15); }
   .why-chip { left: 0; bottom: 24px; }
 }
 
+/* ---------- أداء: ظهور القسم الرئيسي بدون JavaScript ---------- */
+.hero-in { animation: hero-in .8s var(--ease) both; animation-delay: calc(var(--d, 0) * 90ms); }
+@keyframes hero-in { from { opacity: 0; transform: translateY(24px); } }
+
+/* ---------- أداء: حركات SVG تشتغل بس لما القسم ظاهر ---------- */
+[data-anim]:not(.is-visible) .spin,
+[data-anim]:not(.is-visible) .spin-rev,
+[data-anim]:not(.is-visible) .bob,
+[data-anim]:not(.is-visible) .dash-move,
+.step:not(.active) .spin,
+.step:not(.active) .spin-rev,
+.step:not(.active) .bob,
+.step:not(.active) .dash-move { animation-play-state: paused; }
+
 /* ==========================================================
    تقليل الحركة
    ========================================================== */

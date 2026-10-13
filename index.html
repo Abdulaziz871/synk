@@ -2,13 +2,24 @@
 <html lang="ar" dir="rtl">
 <head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H048XLH4CG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-H048XLH4CG');
+
+    // نحمّل سكربت قوقل بعد تحميل الصفحة عشان ما يبطّئها (الزيارات تنحسب عادي)
+    window.addEventListener('load', function () {
+      var load = function () {
+        var g = document.createElement('script');
+        g.async = true;
+        g.src = 'https://www.googletagmanager.com/gtag/js?id=G-H048XLH4CG';
+        document.head.appendChild(g);
+      };
+      if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 2500 });
+      else setTimeout(load, 1200);
+    });
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,7 +58,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/style.css?v=4">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -406,20 +417,20 @@
 
       <div class="container hero-grid">
         <div class="hero-text">
-          <span class="badge" data-reveal><span class="dot"></span>سِنك للحلول التطويرية</span>
-          <h1 data-reveal style="--d:1">شغلك متلخبط؟ <span class="hl">خلّه علينا</span></h1>
-          <p class="hero-lead" data-reveal style="--d:2">في سِنك نرتب لك مشاريعك، ونخلّص عنك الشغل اليدوي اللي ياكل وقتك، ونبني لك طريقة شغل واضحة. وأنت ركّز على اللي يكبّر شركتك.</p>
-          <div class="hero-actions" data-reveal style="--d:3">
+          <span class="badge hero-in"><span class="dot"></span>سِنك للحلول التطويرية</span>
+          <h1 class="hero-in" style="--d:1">شغلك متلخبط؟ <span class="hl">خلّه علينا</span></h1>
+          <p class="hero-lead hero-in" style="--d:2">في سِنك نرتب لك مشاريعك، ونخلّص عنك الشغل اليدوي اللي ياكل وقتك، ونبني لك طريقة شغل واضحة. وأنت ركّز على اللي يكبّر شركتك.</p>
+          <div class="hero-actions hero-in" style="--d:3">
             <a href="#contact" class="btn btn-primary">احجز جلسة مجانية <svg class="ico arrow" aria-hidden="true"><use href="#i-arrow-left"/></svg></a>
             <a href="#services" class="btn btn-ghost">وش نقدم؟</a>
           </div>
-          <p class="hero-note" data-reveal style="--d:4">
+          <p class="hero-note hero-in" style="--d:4">
             <span class="check" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
             الجلسة الأولى مجانية وبدون أي التزام
           </p>
         </div>
 
-        <div class="hero-art" data-reveal style="--d:2">
+        <div class="hero-art hero-in" style="--d:2">
           <svg viewBox="0 0 520 460" role="img" aria-label="رسمة لشخص قدامه لوحة مهام مرتبة">
             <circle cx="452" cy="70" r="54" fill="#FE7F2D"/>
             <circle cx="300" cy="200" r="190" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="2" stroke-dasharray="6 10"/>
@@ -750,7 +761,7 @@
     </section>
 
     <!-- 【5】 كيف نشتغل -->
-    <section class="section bg-navy process" id="process">
+    <section data-anim class="section bg-navy process" id="process">
       <div class="dots dots-light" aria-hidden="true"></div>
       <div class="sync-motif" aria-hidden="true"><svg class="ico"><use href="#i-sync"/></svg></div>
       <svg class="converge" viewBox="0 0 520 300" aria-hidden="true"><use href="#converge"/></svg>
@@ -987,7 +998,7 @@
     </section>
 
     <!-- 【6】 حاسبة الوقت -->
-    <section class="section bg-white calc" id="calculator">
+    <section data-anim class="section bg-white calc" id="calculator">
       <div class="container">
         <div class="section-head" data-reveal>
           <h2>كم ساعة تضيع عليكم بالأسبوع؟</h2>
@@ -1138,7 +1149,7 @@
     </section>
 
     <!-- 【8】 الأسئلة الشائعة -->
-    <section class="section bg-white" id="faq">
+    <section data-anim class="section bg-white" id="faq">
       <div class="container">
         <div class="section-head" data-reveal>
           <h2>عندك سؤال؟</h2>
@@ -1299,6 +1310,6 @@
     <span class="wa-tip" aria-hidden="true"><svg class="ico"><use href="#i-message-circle"/></svg>كلّمنا واتساب</span>
   </a>
 
-  <script src="js/main.js?v=3" defer></script>
+  <script src="js/main.js?v=4" defer></script>
 </body>
 </html>
