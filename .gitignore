@@ -5,3 +5,6 @@ desktop.ini
 node_modules/
 __pycache__/
 fonts/_source/
+
+.vercel
+.env*
