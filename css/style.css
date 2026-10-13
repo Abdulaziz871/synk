@@ -2,33 +2,6 @@
    سِنك للحلول التطويرية — Landing Page
    ========================================================== */
 
-/* ---------- الخطوط المحلية (وزارة الثقافة) ----------
-   حرف المصمك متوفر بوزن واحد بس (Bold 700): نستخدمه للعناوين والأزرار والقائمة،
-   والفقرات بـ IBM Plex Sans Arabic عشان تكون مريحة للقراءة. */
-@font-face {
-  font-family: "Masmak";
-  src: url("../fonts/Masmak-Bold.woff2") format("woff2");
-  font-weight: 700;
-  /* الأرقام العربية (٠-٩) تطلع لاتينية في هذا الخط، فنخليها للخط الاحتياطي */
-  unicode-range: U+0000-065F, U+066A-10FFFF;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Saudi";
-  src: url("../fonts/Saudi-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Saudi";
-  src: url("../fonts/Saudi-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* ---------- المتغيرات ---------- */
 :root {
   --navy: #233D4D;
@@ -46,9 +19,8 @@
   --bad: #D9534F;
   --bad-bg: rgba(217, 83, 79, .1);
 
-  --font-main: "Masmak", "IBM Plex Sans Arabic", sans-serif;
-  --font-body: "IBM Plex Sans Arabic", sans-serif;
-  --font-accent: "Saudi", "Masmak", "IBM Plex Sans Arabic", sans-serif;
+  --font-main: "IBM Plex Sans Arabic", sans-serif;
+  --font-accent: "IBM Plex Sans Arabic", sans-serif;
 
   --r-card: 16px;
   --r-btn: 12px;
@@ -69,7 +41,7 @@ html {
 }
 body {
   margin: 0;
-  font-family: var(--font-body);
+  font-family: var(--font-main);
   font-weight: 400;
   font-size: 17px;
   line-height: 1.8;
@@ -79,12 +51,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 h1, h2, h3, h4 { font-family: var(--font-main); font-weight: 700; line-height: 1.35; margin: 0; color: inherit; }
-/* عناصر حرف المصمك (بوزن 700) */
-b, strong, .btn, .nav-links a, .faq-q, .field label, .step-title, .step-list-title,
-.ba-toggle button, .problem-cta a, .extra-link, .range-val, .service-result,
-.dash-ok, .metric .ba-text, .services-cta strong {
-  font-family: var(--font-main); font-weight: 700;
-}
 p { margin: 0; }
 ul { margin: 0; padding: 0; list-style: none; }
 img { max-width: 100%; display: block; }
