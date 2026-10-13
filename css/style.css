@@ -991,3 +991,7 @@ input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.15); }
   .js [data-reveal] { opacity: 1; transform: none; }
   .float-card, .sync-motif, .spin, .spin-rev, .bob, .wa-float::before, .cta-ico { animation: none !important; }
 }
+
+/* نبذة التذييل */
+.footer .footer-about { margin-top: 12px; max-width: 420px; font-size: .92rem; line-height: 1.8; color: var(--on-dark-muted); opacity: .85; }
+@media (max-width: 640px) { .footer .footer-about { margin-inline: auto; } }
