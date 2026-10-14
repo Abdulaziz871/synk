@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://synk-sa.vercel.app/sitemap.xml
+Sitemap: https://synk-sa.com/sitemap.xml
